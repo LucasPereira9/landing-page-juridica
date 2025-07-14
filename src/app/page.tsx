@@ -14,15 +14,15 @@ export default function Home() {
         <ImageSlider images={CarrouselImages} />
       </div>
 
-      <section id="services" style={{ height: "100vh", padding: "2rem" }}>
+      <section id="services" style={{ height: "100vh" }}>
         <h1>Serviços</h1>
       </section>
 
-      <section id="about" style={{ height: "100vh", padding: "2rem" }}>
+      <section id="about" style={{ height: "100vh" }}>
         <h1>Sobre</h1>
       </section>
 
-      <section id="contact" style={{ height: "100vh", padding: "2rem" }}>
+      <section id="contact" style={{ height: "100vh" }}>
         <h1>Contato</h1>
       </section>
     </>

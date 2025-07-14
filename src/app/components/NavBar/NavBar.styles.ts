@@ -9,9 +9,12 @@ export const NavWrapper = styled.div`
   margin-top: 2rem;
   position: absolute;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(12, 12, 12, 0.93);
   z-index: 100;
+  overflow-x: hidden;         /* Garante nada extrapola horizontalmente */
 `
 
 export const LogoWrapper = styled.div`
@@ -19,6 +22,7 @@ export const LogoWrapper = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
 `
+
 export const LogoTitle = styled.span`
   color: #fff;
   font-size: 2.6rem;
@@ -30,6 +34,9 @@ export const LogoTitle = styled.span`
 export const ItemsWrapper = styled.div`
   display: flex;
   gap: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 `
 
 export const NavItem = styled.div`
@@ -41,6 +48,7 @@ export const NavItem = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  white-space: nowrap;
 
   &:hover span {
     width: 100%;

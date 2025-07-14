@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import * as S from './Slider.styles';
@@ -11,11 +11,20 @@ interface ImageSliderProps {
 }
 
 export function ImageSlider({ images }: ImageSliderProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <S.StyledSwiper>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        navigation
+        navigation={!isMobile}
         pagination={{ clickable: true }}
         autoplay={{ delay: 10000 }}
         loop={true}
