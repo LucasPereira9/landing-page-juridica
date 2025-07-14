@@ -1,9 +1,10 @@
+"use client"
+import { NavBar } from "./components/NavBar/NavBar";
+
 export default function Home() {
   return (
     <div>
-      <h1>
-        initial commit!
-      </h1>
+      <NavBar />
     </div>
   );
 }
