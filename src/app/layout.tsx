@@ -1,10 +1,10 @@
-import { Merriweather } from 'next/font/google'
+import { EB_Garamond } from 'next/font/google'
 import "./globals.css";
 
-const merriweather = Merriweather({
+const ebGaramond = EB_Garamond({
   subsets: ['latin'],
   weight: ['400', '700'],
-})
+});
 
 import { ReactNode } from 'react';
 
@@ -15,7 +15,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-BR">
-      <body className={merriweather.className}>
+      <body className={ebGaramond.className}>
         {children}
       </body>
     </html>
