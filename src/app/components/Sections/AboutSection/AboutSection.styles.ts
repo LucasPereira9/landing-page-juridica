@@ -21,6 +21,7 @@ export const Content = styled.div`
 export const TextSide = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   flex: 1 1 40%;
   gap: 2rem;
 `;

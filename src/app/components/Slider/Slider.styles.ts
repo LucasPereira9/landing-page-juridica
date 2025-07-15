@@ -7,6 +7,24 @@ export const ImageWrapper = styled.img`
 `;
 
 export const StyledSwiper = styled.div`
+  height: 100vh;
+
+  @media (max-width: 1024px) {
+    height: 39rem;
+  }
+
+  @media (max-width: 375px) {
+    height: 30rem;
+  }
+
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-pagination {
+    margin: 0 !important;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     color: #ca9f62ed;
@@ -37,3 +55,6 @@ export const StyledSwiper = styled.div`
     opacity: 1;
   }
 `;
+
+
+

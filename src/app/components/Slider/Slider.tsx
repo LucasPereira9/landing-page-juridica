@@ -28,14 +28,13 @@ export function ImageSlider({ images }: ImageSliderProps) {
         pagination={{ clickable: true }}
         autoplay={{ delay: 10000 }}
         loop={true}
-        style={{ width: "100%", maxHeight: "100vh" }}
-      >
+        >
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <S.ImageWrapper
               src={src}
               alt={`Slide ${idx + 1}`}
-            />
+              />
           </SwiperSlide>
         ))}
       </Swiper>
