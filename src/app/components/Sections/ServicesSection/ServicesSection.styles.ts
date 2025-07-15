@@ -15,7 +15,6 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 800px;
   gap: 2rem;
 `;
 
@@ -55,3 +54,14 @@ export const Description = styled.p`
   line-height: 1.6;
   color: #ffffff;
 `;
+
+export const CardsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 50vw;
+  background-color: red; // TODO centralizar
+`;
+

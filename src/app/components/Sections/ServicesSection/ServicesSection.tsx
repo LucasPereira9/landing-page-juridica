@@ -1,5 +1,7 @@
 import React from "react";
-import * as S from './ServicesSection.styles'
+import * as S from './ServicesSection.styles';
+import { ServiceCard } from "../../ServiceCard/ServiceCard";
+import { servicesMock } from "@/utils/mock/services";
 
 interface AboutSectionProps {
   title?: string;
@@ -8,7 +10,6 @@ interface AboutSectionProps {
 export const ServicesSection = ({
   title = "Serviços",
 }: AboutSectionProps) => {
-    
   return (
     <S.SectionWrapper id="about">
       <S.Content>
@@ -19,6 +20,17 @@ export const ServicesSection = ({
             Especialistas em transformar desafios <br /> <S.Highlight>em soluções</S.Highlight>
           </S.MainTitle>
         </S.TextSide>
+       <S.CardsGrid>
+        {servicesMock.map((service, index) => (
+          <ServiceCard
+            key={index}
+            image={service.image}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </S.CardsGrid>
       </S.Content>
     </S.SectionWrapper>
   );
