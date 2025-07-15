@@ -22,6 +22,7 @@ export const TextSide = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  padding-top: 6rem;
   flex: 1 1 40%;
   gap: 2rem;
 `;
@@ -57,7 +58,7 @@ export const Image = styled.img`
 
 export const YearsImageWrapper = styled.div`
   position: absolute;
-  top: 68%;
+  top: 62%;
   left: 30%;
   transform: translate(-50%, -50%);
   border: 0.2rem solid #ca9f62ed;

@@ -6,6 +6,7 @@ import { navItems } from "@/utils/mock/navItems";
 import { AboutSection } from "./components/Sections/AboutSection/AboutSection";
 import { useEffect, useState } from "react";
 import { CarrouselImagesMobile, CarrouselImagesWeb } from "@/utils/mock/images";
+import { ServicesSection } from "./components/Sections/ServicesSection/ServicesSection";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,8 +25,8 @@ export default function Home() {
       </section>
       <AboutSection />
 
-      <section id="services" style={{ height: "100vh" }}>
-        <h1>Serviços</h1>
+      <section id="services">
+        <ServicesSection />
       </section>
 
       <section id="contact" style={{ height: "100vh" }}>
