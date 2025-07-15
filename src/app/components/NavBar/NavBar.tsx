@@ -34,7 +34,7 @@ export const NavBar = ({ items }: NavBarProps) => {
  const handleClick = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
-    const yOffset = -120;
+    const yOffset = -90;
     const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
