@@ -54,14 +54,19 @@ export const Description = styled.p`
   line-height: 1.6;
   color: #ffffff;
 `;
-
 export const CardsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
   gap: 2rem;
-  justify-content: center;
   margin-top: 2rem;
-  width: 50vw;
-  background-color: red; // TODO centralizar
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
 `;
 
