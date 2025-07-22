@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./ServiceCard.styles";
-import { IconType } from "react-icons";
+import { PrimaryButton } from "../PrimaryButton/PrimaryButton";
 
 export interface ServiceCardProps {
   image: string;
@@ -22,7 +22,7 @@ export const ServiceCard = ({ image, icon, title, description }: ServiceCardProp
           <S.BackContent>
             <S.IconWrapper>{icon}</S.IconWrapper>
             <S.Title>{title}</S.Title>
-            <S.BackButton>Contato</S.BackButton>
+            <PrimaryButton title="Contato" onClick={() => {}} />
           </S.BackContent>
         </S.CardBack>
       </S.CardInner>

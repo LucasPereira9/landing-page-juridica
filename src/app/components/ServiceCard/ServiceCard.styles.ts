@@ -19,9 +19,9 @@ export const CardFront = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 0.125rem dashed #ca9f62ed;
+  border: 0.125rem dashed #d4a96ea1;
   border-radius: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(24, 24, 24, 0.62);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,7 @@ export const IconWrapper = styled.div`
 
 export const Title = styled.h3`
   font-size: 1.6rem;
+  margin-bottom: 0,4rem;
   color: #fff;
   font-weight: 600;
 `;
@@ -88,8 +89,6 @@ export const CardBack = styled.div<{ image: string }>`
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
 `;
-
-
 
 export const BackButton = styled.button`
   background-color: rgba(0, 0, 0, 0.9);
