@@ -19,6 +19,8 @@ export const ServiceCard = ({ image, icon, title, description }: ServiceCardProp
           <S.Description>{description}</S.Description>
         </S.CardFront>
         <S.CardBack image={image}>
+          <div className="border-left" />
+          <div className="border-right" />
           <S.BackContent>
             <S.IconWrapper>{icon}</S.IconWrapper>
             <S.Title>{title}</S.Title>

@@ -19,7 +19,6 @@ export const CardFront = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 0.125rem dashed #d4a96ea1;
   border-radius: 0.5rem;
   background-color: rgba(24, 24, 24, 0.62);
   display: flex;
@@ -30,6 +29,7 @@ export const CardFront = styled.div`
   transition: opacity 0.6s ease, transform 0.6s ease;
   opacity: 1;
   transform: scale(1);
+  overflow: hidden;
 
   ${CardContainer}:hover & {
     opacity: 0;
@@ -44,7 +44,7 @@ export const IconWrapper = styled.div`
 
 export const Title = styled.h3`
   font-size: 1.6rem;
-  margin-bottom: 0,4rem;
+  margin-bottom: 0.4rem;
   color: #fff;
   font-weight: 600;
 `;
@@ -63,22 +63,75 @@ export const CardBack = styled.div<{ image: string }>`
   background-image: url(${({ image }) => image});
   background-size: cover;
   background-position: center;
-  border-radius: 0.5rem;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.8s ease, transform 0.6s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   ${CardContainer}:hover & {
     opacity: 1;
     transform: scale(1);
   }
 
-`;export const BackContent = styled.div`
+  &::before,
+  &::after,
+  .border-left,
+  .border-right {
+    content: '';
+    position: absolute;
+    background-color: #d4a96e;
+    transition: all 0.8s ease;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    bottom: 0;
+    right: 50%;
+    width: 0%;
+    height: 2px;
+    transform: translateX(50%);
+  }
+
+  .border-left {
+    left: 0;
+    top: 50%;
+    width: 2px;
+    height: 0%;
+    transform: translateY(-50%);
+  }
+
+  .border-right {
+    right: 0;
+    bottom: 50%;
+    width: 2px;
+    height: 0%;
+    transform: translateY(50%);
+  }
+
+  ${CardContainer}:hover &::before,
+  ${CardContainer}:hover &::after {
+    width: 100%;
+  }
+
+  ${CardContainer}:hover & .border-left,
+  ${CardContainer}:hover & .border-right {
+    height: 100%;
+  }
+`;
+
+export const BackContent = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0.5rem;
   width: 100%;
   height: 100%;
   display: flex;
