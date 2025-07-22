@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as S from './ServicesSection.styles';
 import { ServiceCard } from "../../ServiceCard/ServiceCard";
 import { servicesMock } from "@/utils/mock/services";
-import { TestimonialSlider } from "../../TestimonialSlider/TestimonialSlider"; // 👈 novo import
+import { TestimonialSlider } from "../../TestimonialSlider/TestimonialSlider";
 
 interface AboutSectionProps {
   title?: string;
@@ -11,6 +11,14 @@ interface AboutSectionProps {
 export const ServicesSection = ({
   title = "Serviços",
 }: AboutSectionProps) => {
+  const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 1240);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+      }, []);
+        
   return (
     <S.SectionWrapper id="services">
       <S.Content>
@@ -33,7 +41,15 @@ export const ServicesSection = ({
             />
           ))}
         </S.CardsGrid>
-        <TestimonialSlider />
+        <S.TestimonialWrapper>
+          <TestimonialSlider />
+          {!isMobile &&  
+          <S.TestimonialImage
+            src="/images/lawyer.png"
+            alt="Imagem representando justiça"
+          />}
+         
+        </S.TestimonialWrapper>
       </S.Content>
     </S.SectionWrapper>
   );

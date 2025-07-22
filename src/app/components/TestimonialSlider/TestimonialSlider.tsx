@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     message: "Equipe extremamente profissional e atenciosa.",
-    name: "Mariana Souza",
+    name: "Roberto Souza",
     avatar: "https://i.pravatar.cc/150?img=3",
   },
 ];

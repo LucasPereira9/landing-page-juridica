@@ -70,3 +70,24 @@ export const CardsGrid = styled.div`
   }
 `;
 
+export const TestimonialWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+`;
+
+export const TestimonialImage = styled.img`
+  max-width: 30rem;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+`;
+

@@ -3,10 +3,9 @@ import styled from "styled-components";
 export const TestimonialWrapper = styled.div`
   margin-top: 4rem;
   width: 100%;
-  max-width: 30rem;
+  max-width: 45rem;
   height: 30rem;
   background: linear-gradient(135deg, #1a1a1a, #333333);
-  border-radius: 1rem;
   padding: 2rem;
   box-sizing: border-box;
   position: relative;
@@ -49,8 +48,9 @@ export const TestimonialWrapper = styled.div`
 `;
 
 export const Quote = styled.span`
-  font-size: 6rem;
+  font-size: 14rem;
   color: #ca9f62;
+  height: 8rem;
   line-height: 1;
   margin-bottom: 1rem;
 `;
