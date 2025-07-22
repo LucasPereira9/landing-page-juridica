@@ -3,15 +3,18 @@ import styled from "styled-components";
 export const TestimonialWrapper = styled.div`
   margin-top: 4rem;
   width: 100%;
-  max-width: 500px;
-  height: 500px;
+  max-width: 30rem;
+  height: 30rem;
   background: linear-gradient(135deg, #1a1a1a, #333333);
   border-radius: 1rem;
   padding: 2rem;
   box-sizing: border-box;
   position: relative;
   color: #fff;
-
+  @media (max-width: 425px) {
+    max-width: 20rem;
+    padding: 1rem;
+  }
   .swiper {
     width: 100%;
     height: 100%;

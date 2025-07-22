@@ -30,20 +30,20 @@ export const InfoWrapper = styled.div`
 `;
 
 export const MainTitle = styled.span`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #181818d3;
   margin-bottom: 1rem;
 `;
 
 export const Highlight = styled.span`
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #ca9f62ed;
 `;
 
 export const ContactTitle = styled.h3`
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #181818d3;
   font-weight: 600;
 `;
@@ -63,7 +63,8 @@ export const ContactGroup = styled.div`
 `;
 
 export const AddressWrapper = styled(ContactGroup)`
-  flex-wrap: wrap;
+  align-items: flex-start;
+  display: flex;
 `;
 export const FormWrapper = styled.div`
   margin-bottom: 1.5rem;
