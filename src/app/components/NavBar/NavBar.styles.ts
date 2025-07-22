@@ -47,6 +47,7 @@ export const LogoTitle = styled.span`
 export const ItemsWrapper = styled.div`
   display: flex;
   gap: 2rem;
+  width: 42%;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;

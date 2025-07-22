@@ -57,7 +57,7 @@ export const NavBar = ({ items }: NavBarProps) => {
         </S.ItemsWrapper>
       )}
 
-      <SideMenu content={<p>Conteúdo do menu lateral aqui</p>} />
+      {isMobile && <SideMenu content={<p>Conteúdo do menu lateral aqui</p>} /> }
     </S.NavWrapper>
   );
 };
