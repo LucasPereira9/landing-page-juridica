@@ -11,7 +11,7 @@ export const ServicesSection = ({
   title = "Serviços",
 }: AboutSectionProps) => {
   return (
-    <S.SectionWrapper id="about">
+    <S.SectionWrapper id="services">
       <S.Content>
         <div />
         <S.TextSide>

@@ -7,6 +7,7 @@ import { AboutSection } from "./components/Sections/AboutSection/AboutSection";
 import { useEffect, useState } from "react";
 import { CarrouselImagesMobile, CarrouselImagesWeb } from "@/utils/mock/images";
 import { ServicesSection } from "./components/Sections/ServicesSection/ServicesSection";
+import { ContactSection } from "./components/Sections/ContactSection/ContactSection";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,14 +25,8 @@ export default function Home() {
         <ImageSlider images={isMobile ? CarrouselImagesMobile : CarrouselImagesWeb} />
       </section>
       <AboutSection />
-
-      <section id="services">
-        <ServicesSection />
-      </section>
-
-      <section id="contact" style={{ height: "100vh" }}>
-        <h1>Contato</h1>
-      </section>
+      <ServicesSection />
+      <ContactSection />
     </>
   );
 }
