@@ -12,7 +12,7 @@ export const Button = styled.button`
   overflow: hidden;
   z-index: 0;
   transition: all 0.5s;
-  width: 9rem;
+  min-width: 12rem;
 
   &::before {
     content: '';

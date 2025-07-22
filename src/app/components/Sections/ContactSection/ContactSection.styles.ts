@@ -21,25 +21,23 @@ export const InfoWrapper = styled.div`
   display: flex;
   align-items: start;
   gap: 2rem;
-  width: 100%;
-`;
-
-export const SmallTitle = styled.h3`
-  color: #ffffffd7;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-top: 1rem;
+  justify-content: space-around;
+  width: 90%;
+   @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const MainTitle = styled.span`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 1rem;
 `;
 
 export const Highlight = styled.span`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #ca9f62ed;
 `;
 
@@ -66,3 +64,32 @@ export const ContactGroup = styled.div`
 export const AddressWrapper = styled(ContactGroup)`
   flex-wrap: wrap;
 `;
+export const FormWrapper = styled.div`
+  margin-bottom: 1.5rem;
+  width: 100%;
+
+  h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const InputsRow = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  > * {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const MessageWrapper = styled.div`
+  margin-top: 1rem;
+`;
+
