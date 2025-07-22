@@ -5,7 +5,7 @@ const sharedStyles = css`
   padding: 1rem;
   border: 2px solid transparent;
   border-radius: 0.5rem;
-  background-color: #1f1f1f79;
+  background-color: #181818a8;
   color: #ffffff;
   font-size: 1rem;
   transition: border 0.3s, box-shadow 0.3s;
@@ -17,7 +17,7 @@ const sharedStyles = css`
   }
 
   &::placeholder {
-    color: #aaa;
+    color: #ffffffff;
   }
 `;
 

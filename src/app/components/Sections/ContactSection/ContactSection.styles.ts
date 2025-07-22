@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionWrapper = styled.section`
-  background: linear-gradient(90deg, rgba(66, 66, 66, 0.71) 0%, rgba(14, 13, 13, 0.81) 100%);
+  background-color: #ffffff9c;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 82%;
+  width: 65%;
 `;
 
 export const InfoWrapper = styled.div`
@@ -32,7 +32,7 @@ export const InfoWrapper = styled.div`
 export const MainTitle = styled.span`
   font-size: 2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #181818d3;
   margin-bottom: 1rem;
 `;
 
@@ -44,6 +44,7 @@ export const Highlight = styled.span`
 export const ContactTitle = styled.h3`
   color: #fff;
   font-size: 1.4rem;
+  color: #181818d3;
   font-weight: 600;
 `;
 
@@ -69,7 +70,7 @@ export const FormWrapper = styled.div`
   width: 100%;
 
   h2 {
-    color: #fff;
+    color: #181818a8;
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
