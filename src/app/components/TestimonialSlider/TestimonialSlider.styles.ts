@@ -10,6 +10,12 @@ export const TestimonialWrapper = styled.div`
   box-sizing: border-box;
   position: relative;
   color: #fff;
+
+    @media (max-width: 768px) {
+    max-width: 80%;
+    padding: 1rem;
+  }
+
   @media (max-width: 425px) {
     max-width: 20rem;
     padding: 1rem;

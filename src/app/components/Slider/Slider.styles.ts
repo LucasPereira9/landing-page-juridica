@@ -14,7 +14,7 @@ export const StyledSwiper = styled.div`
   }
 
   @media (max-width: 375px) {
-    height: 30rem;
+    height: 27rem;
   }
 
   .swiper {
