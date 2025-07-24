@@ -9,6 +9,7 @@ import { CarrouselImagesMobile, CarrouselImagesWeb } from "@/utils/mock/images";
 import { ServicesSection } from "./components/Sections/ServicesSection/ServicesSection";
 import { ContactSection } from "./components/Sections/ContactSection/ContactSection";
 import { LoadingScreen } from "./components/LoadingScreen/LoadingScreen";
+import { WhatsAppFloat } from "./components/WhatsappFloat/WhatsappFloat";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -45,6 +46,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ContactSection />
+      <WhatsAppFloat />
     </>
   );
 }
