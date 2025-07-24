@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const SectionWrapper = styled.section`
+  align-items: center;
+  align-content: center;
   background-color: #ffffff9c;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
   flex: 1;
   padding: 4rem 1rem;
     @media (max-width: 768px) {

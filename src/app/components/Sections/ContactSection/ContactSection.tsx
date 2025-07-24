@@ -3,11 +3,13 @@ import * as S from './ContactSection.styles';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { Input } from "../../Input/Input";
 import { PrimaryButton } from "../../PrimaryButton/PrimaryButton";
+import { FadeInSection } from "../../FadeInSection/FadeInSection";
 
 export const ContactSection = () => {
   return (
     <S.SectionWrapper id="contact">
       <S.Content>
+      <FadeInSection>
         <S.InfoWrapper>
           <S.MainTitle>
             Entre em contato conosco <br /> <S.Highlight>Estamos prontos para ajudar</S.Highlight>
@@ -46,6 +48,7 @@ export const ContactSection = () => {
             <Input placeholder="Digite sua mensagem..." isMessage />
           </S.MessageWrapper>
         </S.FormWrapper>
+      </FadeInSection>
       </S.Content>
       <PrimaryButton title="Enviar Mensagem" onClick={() => {}} />
     </S.SectionWrapper>

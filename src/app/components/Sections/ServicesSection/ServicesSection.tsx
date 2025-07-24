@@ -3,6 +3,7 @@ import * as S from './ServicesSection.styles';
 import { ServiceCard } from "../../ServiceCard/ServiceCard";
 import { servicesMock } from "@/utils/mock/services";
 import { TestimonialSlider } from "../../TestimonialSlider/TestimonialSlider";
+import { FadeInSection } from "../../FadeInSection/FadeInSection";
 
 interface AboutSectionProps {
   title?: string;
@@ -21,6 +22,7 @@ export const ServicesSection = ({
         
   return (
     <S.SectionWrapper id="services">
+      <FadeInSection>
       <S.Content>
         <div />
         <S.TextSide>
@@ -38,19 +40,20 @@ export const ServicesSection = ({
               icon={service.icon}
               title={service.title}
               description={service.description}
-            />
-          ))}
+              />
+            ))}
         </S.CardsGrid>
         <S.TestimonialWrapper>
           <TestimonialSlider />
           {!isMobile &&  
           <S.TestimonialImage
-            src="/images/lawyer.png"
+          src="/images/lawyer.png"
             alt="Imagem representando justiça"
-          />}
+            />}
          
         </S.TestimonialWrapper>
       </S.Content>
+      </FadeInSection>
     </S.SectionWrapper>
   );
 };
