@@ -12,7 +12,7 @@ export const TestimonialWrapper = styled.div`
   color: #fff;
 
     @media (max-width: 768px) {
-    max-width: 80%;
+    max-width: 25rem;
     padding: 1rem;
   }
 
