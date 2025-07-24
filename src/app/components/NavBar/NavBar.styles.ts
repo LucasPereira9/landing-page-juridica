@@ -77,3 +77,27 @@ export const Underline = styled.span`
   transition: width 0.3s ease;
   margin-top: 4px;
 `
+
+export const MenuList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+`
+
+export const MenuListItem = styled.li`
+  color: #ca9f62ed;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-bottom: 2px solid #ca9f62ed;
+  }
+`
+

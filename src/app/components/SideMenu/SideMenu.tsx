@@ -4,21 +4,22 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 interface SideMenuProps {
   content: React.ReactNode;
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
 }
 
-export const SideMenu = ({ content }: SideMenuProps) => {
-  const [open, setOpen] = useState(false);
+export const SideMenu = ({ content, isOpen, setIsOpen }: SideMenuProps) => {
 
   return (
     <>
-      <S.MenuButton onClick={() => setOpen(true)}>
+      <S.MenuButton onClick={() => setIsOpen(true)}>
         <FaBars size={38} color="#ca9f62ed" />
       </S.MenuButton>
 
-      <S.Overlay open={open} onClick={() => setOpen(false)} />
+      <S.Overlay open={isOpen} onClick={() => setIsOpen(false)} />
 
-      <S.Sidebar open={open}>
-        <S.CloseButton onClick={() => setOpen(false)}>
+      <S.Sidebar open={isOpen}>
+        <S.CloseButton onClick={() => setIsOpen(false)}>
          <FaTimes size={28} color="#ca9f62ed" />
         </S.CloseButton>
         <S.Content>{content}</S.Content>

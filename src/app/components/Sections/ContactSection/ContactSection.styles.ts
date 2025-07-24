@@ -8,6 +8,9 @@ export const SectionWrapper = styled.section`
   align-content: center;
   flex: 1;
   padding: 4rem 1rem;
+    @media (max-width: 768px) {
+      padding-top: 6rem;
+  }
 `;
 
 export const Content = styled.div`
