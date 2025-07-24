@@ -7,6 +7,10 @@ export const CardContainer = styled.div`
   position: relative;
   border-radius: 0.5rem;
   background-color: rgba(0, 0, 0, 0.7);
+  
+  @media (max-width: 768px) {
+    margin-bottom: 6rem;
+  }
 `;
 
 export const CardInner = styled.div`
@@ -35,25 +39,10 @@ export const CardFront = styled.div`
     opacity: 0;
     transform: scale(0.8);
   }
-`;
 
-export const IconWrapper = styled.div`
-  font-size: 2.5rem;
-  color: #fff;
-`;
-
-export const Title = styled.h3`
-  font-size: 1.6rem;
-  margin-bottom: 0.4rem;
-  color: #fff;
-  font-weight: 600;
-`;
-
-export const Description = styled.p`
-  font-size: 1rem;
-  color: #ccc;
-  max-width: 80%;
-  text-align: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CardBack = styled.div<{ image: string }>`
@@ -74,6 +63,21 @@ export const CardBack = styled.div<{ image: string }>`
   ${CardContainer}:hover & {
     opacity: 1;
     transform: scale(1);
+  }
+
+  @media (max-width: 768px) {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+
+  ${CardContainer}.visible &::before,
+  ${CardContainer}.visible &::after {
+    width: 100%;
+  }
+
+  ${CardContainer}.visible & .border-left,
+  ${CardContainer}.visible & .border-right {
+    height: 100%;
   }
 
   &::before,
@@ -118,16 +122,25 @@ export const CardBack = styled.div<{ image: string }>`
     height: 0%;
     transform: translateY(50%);
   }
+`;
 
-  ${CardContainer}:hover &::before,
-  ${CardContainer}:hover &::after {
-    width: 100%;
-  }
+export const IconWrapper = styled.div`
+  font-size: 2.5rem;
+  color: #fff;
+`;
 
-  ${CardContainer}:hover & .border-left,
-  ${CardContainer}:hover & .border-right {
-    height: 100%;
-  }
+export const Title = styled.h3`
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  color: #fff;
+  font-weight: 600;
+`;
+
+export const Description = styled.p`
+  font-size: 1rem;
+  color: #ccc;
+  max-width: 80%;
+  text-align: center;
 `;
 
 export const BackContent = styled.div`
@@ -141,16 +154,4 @@ export const BackContent = styled.div`
   box-sizing: border-box;
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
-`;
-
-export const BackButton = styled.button`
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  width: 100%;
-  max-width: 12rem;
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as S from "./ServiceCard.styles";
 import { PrimaryButton } from "../PrimaryButton/PrimaryButton";
 
@@ -10,8 +10,27 @@ export interface ServiceCardProps {
 }
 
 export const ServiceCard = ({ image, icon, title, description }: ServiceCardProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.7 }
+    );
+
+    const currentRef = cardRef.current;
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, []);
+
   return (
-    <S.CardContainer>
+    <S.CardContainer ref={cardRef} className={isVisible ? "visible" : ""}>
       <S.CardInner>
         <S.CardFront>
           <S.IconWrapper>{icon}</S.IconWrapper>

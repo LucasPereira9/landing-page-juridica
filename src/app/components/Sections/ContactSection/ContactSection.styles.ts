@@ -18,6 +18,9 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 2rem;
   width: 65%;
+    @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -27,6 +30,7 @@ export const InfoWrapper = styled.div`
   justify-content: space-around;
   width: 90%;
    @media (max-width: 768px) {
+    margin-bottom: 2rem;
     flex-direction: column;
     width: 100%;
   }
